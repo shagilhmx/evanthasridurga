@@ -869,3 +869,19 @@ input {
   font-size: 20px;
   margin: 0
 }
+
+.project-banner {
+  background-image: url('/assets/images/backgroundImage.jpeg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media (max-width: 767px) {
+  .project-banner {
+    background-image: url('/assets/images/backgroundImageMobile.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
