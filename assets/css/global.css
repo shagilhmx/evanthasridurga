@@ -871,7 +871,7 @@ input {
 }
 
 .project-banner {
-  background-image: url('/assets/images/backgroundImage.jpeg');
+  background-image: url('../images/backgroundImage.webp');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -879,7 +879,7 @@ input {
 
 @media (max-width: 767px) {
   .project-banner {
-    background-image: url('/assets/images/backgroundImageMobile.webp');
+    background-image: url('../images/backgroundImageMobile.webp');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
