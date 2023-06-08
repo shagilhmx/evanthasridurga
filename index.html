@@ -50,109 +50,6 @@
     <script type="text/worker" id="nitro-web-worker">
       var preloadRequests=0;var remainingCount={};var baseURI="";self.onmessage=function(e){switch(e.data.cmd){case"RESOURCE_PRELOAD":var a=e.data.requestId;remainingCount[a]=0;e.data.resources.forEach(function(o){preload(o,function(e){return function(){console.log(e+" DONE: "+o);if(--remainingCount[e]==0){self.postMessage({cmd:"RESOURCE_PRELOAD",requestId:e})}}}(a));remainingCount[a]++});break;case"SET_BASEURI":baseURI=e.data.uri;break}};async function preload(o,a){if(typeof URL!=="undefined"&&baseURI){try{var e=new URL(o,baseURI);o=e.href}catch(e){console.log("Worker error: "+e.message)}}console.log("Preloading "+o);try{var n=new Request(o,{mode:"no-cors",redirect:"follow"});await fetch(n);a()}catch(e){console.log(e);var r=new XMLHttpRequest;r.responseType="blob";r.onload=a;r.onerror=a;r.open("GET",o,true);r.send()}}
     </script>
-    <script>
-      window._wpemojiSettings = {
-        baseUrl: "https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/",
-        ext: ".png",
-        svgUrl: "https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/",
-        svgExt: ".svg",
-        source: {
-          concatemoji:
-            "https:\/\/livingwalls.in\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.1.1",
-        },
-      };
-      /*! This file is auto-generated */
-      !(function (e, a, t) {
-        var n,
-          r,
-          o,
-          i = a.createElement("canvas"),
-          p = i.getContext && i.getContext("2d");
-        function s(e, t) {
-          var a = String.fromCharCode,
-            e =
-              (p.clearRect(0, 0, i.width, i.height),
-              p.fillText(a.apply(this, e), 0, 0),
-              i.toDataURL());
-          return (
-            p.clearRect(0, 0, i.width, i.height),
-            p.fillText(a.apply(this, t), 0, 0),
-            e === i.toDataURL()
-          );
-        }
-        function c(e) {
-          var t = a.createElement("script");
-          (t.src = e),
-            (t.defer = t.type = "text/javascript"),
-            a.getElementsByTagName("head")[0].appendChild(t);
-        }
-        for (
-          o = Array("flag", "emoji"),
-            t.supports = { everything: !0, everythingExceptFlag: !0 },
-            r = 0;
-          r < o.length;
-          r++
-        )
-          (t.supports[o[r]] = (function (e) {
-            if (p && p.fillText)
-              switch (
-                ((p.textBaseline = "top"), (p.font = "600 32px Arial"), e)
-              ) {
-                case "flag":
-                  return s(
-                    [127987, 65039, 8205, 9895, 65039],
-                    [127987, 65039, 8203, 9895, 65039],
-                  )
-                    ? !1
-                    : !s(
-                        [55356, 56826, 55356, 56819],
-                        [55356, 56826, 8203, 55356, 56819],
-                      ) &&
-                        !s(
-                          [
-                            55356, 57332, 56128, 56423, 56128, 56418, 56128,
-                            56421, 56128, 56430, 56128, 56423, 56128, 56447,
-                          ],
-                          [
-                            55356, 57332, 8203, 56128, 56423, 8203, 56128,
-                            56418, 8203, 56128, 56421, 8203, 56128, 56430, 8203,
-                            56128, 56423, 8203, 56128, 56447,
-                          ],
-                        );
-                case "emoji":
-                  return !s(
-                    [129777, 127995, 8205, 129778, 127999],
-                    [129777, 127995, 8203, 129778, 127999],
-                  );
-              }
-            return !1;
-          })(o[r])),
-            (t.supports.everything = t.supports.everything && t.supports[o[r]]),
-            "flag" !== o[r] &&
-              (t.supports.everythingExceptFlag =
-                t.supports.everythingExceptFlag && t.supports[o[r]]);
-        (t.supports.everythingExceptFlag =
-          t.supports.everythingExceptFlag && !t.supports.flag),
-          (t.DOMReady = !1),
-          (t.readyCallback = function () {
-            t.DOMReady = !0;
-          }),
-          t.supports.everything ||
-            ((n = function () {
-              t.readyCallback();
-            }),
-            a.addEventListener
-              ? (a.addEventListener("DOMContentLoaded", n, !1),
-                e.addEventListener("load", n, !1))
-              : (e.attachEvent("onload", n),
-                a.attachEvent("onreadystatechange", function () {
-                  "complete" === a.readyState && t.readyCallback();
-                })),
-            (e = t.source || {}).concatemoji
-              ? c(e.concatemoji)
-              : e.wpemoji && e.twemoji && (c(e.twemoji), c(e.wpemoji)));
-      })(window, document, window._wpemojiSettings);
-    </script>
     <style>
       img.wp-smiley,
       img.emoji {
@@ -584,15 +481,6 @@
       }
     </style>
 
-    <script
-      src="assets//wp-includes/js/jquery/jquery.min.js"
-      id="jquery-core-js"
-    ></script>
-    <script
-      src="assets//wp-includes/js/jquery/jquery-migrate.min.js"
-      id="jquery-migrate-js"
-    ></script>
-
     <!--  -->
     <!--  -->
     <!-- my script -->
@@ -651,59 +539,6 @@
     <!--  -->
     <!--  -->
     <!--  -->
-    <link
-      rel="alternate"
-      type="application/rss+xml"
-      title="Evantha &raquo; Feed"
-      href="https://evanthasridurga.com/feed/"
-    />
-    <link
-      rel="alternate"
-      type="application/rss+xml"
-      title="Evantha &raquo; Comments Feed"
-      href="https://evanthasridurga.com/comments/feed/"
-    />
-    <template
-      data-nitro-marker-id="d4db1a6b3d6ee903b79e4213a5bd5c0e-1"
-    ></template>
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
-    <template data-nitro-marker-id="jquery-core-js"></template>
-    <template data-nitro-marker-id="jquery-migrate-js"></template>
-    <link
-      rel="https://api.w.org/"
-      href="https://evanthasridurga.com/wp-json/"
-    />
-    <link
-      rel="alternate"
-      type="application/json"
-      href="https://evanthasridurga.com/wp-json/wp/v2/pages/2431"
-    />
-    <link
-      rel="edituri"
-      type="application/rsd+xml"
-      title="RSD"
-      href="https://evanthasridurga.com/xmlrpc.php?rsd"
-    />
-    <link
-      rel="wlwmanifest"
-      type="application/wlwmanifest+xml"
-      href="https://evanthasridurga.com/wp-includes/wlwmanifest.xml"
-    />
-    <link rel="shortlink" href="https://evanthasridurga.com/?p=2431" />
-    <link
-      rel="alternate"
-      type="application/json+oembed"
-      href="https://evanthasridurga.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fevanthasridurga.com%2Fearthen-ambience%2F"
-    />
-    <link
-      rel="alternate"
-      type="text/xml+oembed"
-      href="https://evanthasridurga.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fevanthasridurga.com%2Fearthen-ambience%2F&#038;format=xml"
-    />
-    <meta
-      name="generator"
-      content="Performance Lab 1.3.0; modules: images/dominant-color, images/webp-uploads, site-health/audit-full-page-cache, site-health/webp-support, object-cache/persistent-object-cache-health-check"
-    />
     <link rel="icon" href="assets/images/Group-2.png" sizes="32x32" />
     <link rel="icon" href="assets/images/Group-2.png" sizes="192x192" />
     <link rel="apple-touch-icon" href="assets/images/Group-2.png" />
@@ -741,272 +576,7 @@
       ></iframe>
     </noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewbox="0 0 0 0"
-      width="0"
-      height="0"
-      focusable="false"
-      role="none"
-      style="
-        visibility: hidden;
-        position: absolute;
-        left: -9999px;
-        overflow: hidden;
-      "
-    >
-      <defs>
-        <filter id="wp-duotone-dark-grayscale">
-          <fecolormatrix
-            color-interpolation-filters="sRGB"
-            type="matrix"
-            values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "
-          ></fecolormatrix>
-          <fecomponenttransfer color-interpolation-filters="sRGB">
-            <fefuncr type="table" tablevalues="0 0.49803921568627"></fefuncr>
-            <fefuncg type="table" tablevalues="0 0.49803921568627"></fefuncg>
-            <fefuncb type="table" tablevalues="0 0.49803921568627"></fefuncb>
-            <fefunca type="table" tablevalues="1 1"></fefunca>
-          </fecomponenttransfer>
-          <fecomposite in2="SourceGraphic" operator="in"></fecomposite>
-        </filter>
-      </defs>
-    </svg>
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewbox="0 0 0 0"
-      width="0"
-      height="0"
-      focusable="false"
-      role="none"
-      style="
-        visibility: hidden;
-        position: absolute;
-        left: -9999px;
-        overflow: hidden;
-      "
-    >
-      <defs>
-        <filter id="wp-duotone-grayscale">
-          <fecolormatrix
-            color-interpolation-filters="sRGB"
-            type="matrix"
-            values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "
-          ></fecolormatrix>
-          <fecomponenttransfer color-interpolation-filters="sRGB">
-            <fefuncr type="table" tablevalues="0 1"></fefuncr>
-            <fefuncg type="table" tablevalues="0 1"></fefuncg>
-            <fefuncb type="table" tablevalues="0 1"></fefuncb>
-            <fefunca type="table" tablevalues="1 1"></fefunca>
-          </fecomponenttransfer>
-          <fecomposite in2="SourceGraphic" operator="in"></fecomposite>
-        </filter>
-      </defs>
-    </svg>
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewbox="0 0 0 0"
-      width="0"
-      height="0"
-      focusable="false"
-      role="none"
-      style="
-        visibility: hidden;
-        position: absolute;
-        left: -9999px;
-        overflow: hidden;
-      "
-    >
-      <defs>
-        <filter id="wp-duotone-purple-yellow">
-          <fecolormatrix
-            color-interpolation-filters="sRGB"
-            type="matrix"
-            values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "
-          ></fecolormatrix>
-          <fecomponenttransfer color-interpolation-filters="sRGB">
-            <fefuncr
-              type="table"
-              tablevalues="0.54901960784314 0.98823529411765"
-            ></fefuncr>
-            <fefuncg type="table" tablevalues="0 1"></fefuncg>
-            <fefuncb
-              type="table"
-              tablevalues="0.71764705882353 0.25490196078431"
-            ></fefuncb>
-            <fefunca type="table" tablevalues="1 1"></fefunca>
-          </fecomponenttransfer>
-          <fecomposite in2="SourceGraphic" operator="in"></fecomposite>
-        </filter>
-      </defs>
-    </svg>
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewbox="0 0 0 0"
-      width="0"
-      height="0"
-      focusable="false"
-      role="none"
-      style="
-        visibility: hidden;
-        position: absolute;
-        left: -9999px;
-        overflow: hidden;
-      "
-    >
-      <defs>
-        <filter id="wp-duotone-blue-red">
-          <fecolormatrix
-            color-interpolation-filters="sRGB"
-            type="matrix"
-            values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "
-          ></fecolormatrix>
-          <fecomponenttransfer color-interpolation-filters="sRGB">
-            <fefuncr type="table" tablevalues="0 1"></fefuncr>
-            <fefuncg type="table" tablevalues="0 0.27843137254902"></fefuncg>
-            <fefuncb
-              type="table"
-              tablevalues="0.5921568627451 0.27843137254902"
-            ></fefuncb>
-            <fefunca type="table" tablevalues="1 1"></fefunca>
-          </fecomponenttransfer>
-          <fecomposite in2="SourceGraphic" operator="in"></fecomposite>
-        </filter>
-      </defs>
-    </svg>
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewbox="0 0 0 0"
-      width="0"
-      height="0"
-      focusable="false"
-      role="none"
-      style="
-        visibility: hidden;
-        position: absolute;
-        left: -9999px;
-        overflow: hidden;
-      "
-    >
-      <defs>
-        <filter id="wp-duotone-midnight">
-          <fecolormatrix
-            color-interpolation-filters="sRGB"
-            type="matrix"
-            values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "
-          ></fecolormatrix>
-          <fecomponenttransfer color-interpolation-filters="sRGB">
-            <fefuncr type="table" tablevalues="0 0"></fefuncr>
-            <fefuncg type="table" tablevalues="0 0.64705882352941"></fefuncg>
-            <fefuncb type="table" tablevalues="0 1"></fefuncb>
-            <fefunca type="table" tablevalues="1 1"></fefunca>
-          </fecomponenttransfer>
-          <fecomposite in2="SourceGraphic" operator="in"></fecomposite>
-        </filter>
-      </defs>
-    </svg>
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewbox="0 0 0 0"
-      width="0"
-      height="0"
-      focusable="false"
-      role="none"
-      style="
-        visibility: hidden;
-        position: absolute;
-        left: -9999px;
-        overflow: hidden;
-      "
-    >
-      <defs>
-        <filter id="wp-duotone-magenta-yellow">
-          <fecolormatrix
-            color-interpolation-filters="sRGB"
-            type="matrix"
-            values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "
-          ></fecolormatrix>
-          <fecomponenttransfer color-interpolation-filters="sRGB">
-            <fefuncr type="table" tablevalues="0.78039215686275 1"></fefuncr>
-            <fefuncg type="table" tablevalues="0 0.94901960784314"></fefuncg>
-            <fefuncb
-              type="table"
-              tablevalues="0.35294117647059 0.47058823529412"
-            ></fefuncb>
-            <fefunca type="table" tablevalues="1 1"></fefunca>
-          </fecomponenttransfer>
-          <fecomposite in2="SourceGraphic" operator="in"></fecomposite>
-        </filter>
-      </defs>
-    </svg>
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewbox="0 0 0 0"
-      width="0"
-      height="0"
-      focusable="false"
-      role="none"
-      style="
-        visibility: hidden;
-        position: absolute;
-        left: -9999px;
-        overflow: hidden;
-      "
-    >
-      <defs>
-        <filter id="wp-duotone-purple-green">
-          <fecolormatrix
-            color-interpolation-filters="sRGB"
-            type="matrix"
-            values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "
-          ></fecolormatrix>
-          <fecomponenttransfer color-interpolation-filters="sRGB">
-            <fefuncr
-              type="table"
-              tablevalues="0.65098039215686 0.40392156862745"
-            ></fefuncr>
-            <fefuncg type="table" tablevalues="0 1"></fefuncg>
-            <fefuncb type="table" tablevalues="0.44705882352941 0.4"></fefuncb>
-            <fefunca type="table" tablevalues="1 1"></fefunca>
-          </fecomponenttransfer>
-          <fecomposite in2="SourceGraphic" operator="in"></fecomposite>
-        </filter>
-      </defs>
-    </svg>
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewbox="0 0 0 0"
-      width="0"
-      height="0"
-      focusable="false"
-      role="none"
-      style="
-        visibility: hidden;
-        position: absolute;
-        left: -9999px;
-        overflow: hidden;
-      "
-    >
-      <defs>
-        <filter id="wp-duotone-blue-orange">
-          <fecolormatrix
-            color-interpolation-filters="sRGB"
-            type="matrix"
-            values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "
-          ></fecolormatrix>
-          <fecomponenttransfer color-interpolation-filters="sRGB">
-            <fefuncr type="table" tablevalues="0.098039215686275 1"></fefuncr>
-            <fefuncg type="table" tablevalues="0 0.66274509803922"></fefuncg>
-            <fefuncb
-              type="table"
-              tablevalues="0.84705882352941 0.41960784313725"
-            ></fefuncb>
-            <fefunca type="table" tablevalues="1 1"></fefunca>
-          </fecomponenttransfer>
-          <fecomposite in2="SourceGraphic" operator="in"></fecomposite>
-        </filter>
-      </defs>
-    </svg>
+
     <div class="modal" id="modal">
       <img
         class="closeIcon"
@@ -1203,6 +773,7 @@
                 src="assets/images/focus.svg"
                 alt="located"
                 class="detect"
+                loading="lazy"
                 id="detect"
               />
               <span id="timer"></span>
@@ -1252,6 +823,7 @@
                         height="150"
                         alt="Livingwalls"
                         decoding="async"
+                        loading="lazy"
                         src="assets/images/PropertyIcon.webp"
                         class="custom-logo br-lazy"
                       />
@@ -1275,7 +847,12 @@
               <p class="mb-0">RERA No. PRM/KA/RERA/1251/308/PR/210323/005811</p>
             </div>
             <div class="project-banner-image">
-              <img src="assets/images/backgroundImage.webp" class="br-lazy" />
+              <img
+                src="assets/images/backgroundImage.webp"
+                class="br-lazy"
+                alt="image"
+                loading="lazy"
+              />
             </div>
           </div>
         </section>
@@ -1467,6 +1044,7 @@
                     alt="located"
                     class="detect"
                     id="detect2"
+                    loading="lazy"
                   />
                   <span id="timer2"></span>
                   <lottie-player
@@ -1500,7 +1078,7 @@
                 <img
                   width="2560"
                   height="1969"
-                  alt=""
+                  alt="image"
                   decoding="async"
                   loading="lazy"
                   src="assets/images/backgroundImage2.webp"
@@ -1645,7 +1223,7 @@
                 <img
                   width="1290"
                   height="979"
-                  alt=""
+                  alt="image"
                   decoding="async"
                   loading="lazy"
                   src="assets/images/backgroundImage3.webp"
@@ -1702,7 +1280,7 @@
                     <img
                       width="640"
                       height="493"
-                      alt=""
+                      alt="image"
                       decoding="async"
                       loading="lazy"
                       src="assets/images/backgroundImage4.webp"
@@ -1744,7 +1322,7 @@
                     <img
                       width="300"
                       height="201"
-                      alt=""
+                      alt="image"
                       decoding="async"
                       loading="lazy"
                       src="assets/images/backgroundImage5.webp"
@@ -1800,7 +1378,7 @@
                     <img
                       width="300"
                       height="300"
-                      alt=""
+                      alt="image"
                       decoding="async"
                       loading="lazy"
                       src="assets/images/backgroundImage7.webp"
@@ -1881,7 +1459,7 @@
                   <img
                     width="600"
                     height="479"
-                    alt=""
+                    alt="image"
                     decoding="async"
                     loading="lazy"
                     data-breeze="https://livingwalls.in/wp-content/uploads/2022/06/Brochure_Mockup.png"
@@ -1937,7 +1515,7 @@
                         <img
                           width="2481"
                           height="3508"
-                          alt=""
+                          alt="image"
                           decoding="async"
                           loading="lazy"
                           data-breeze="https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-023_3BHK_North.png"
@@ -1963,7 +1541,7 @@
                           <img
                             width="64"
                             height="64"
-                            alt=""
+                            alt="image"
                             decoding="async"
                             loading="lazy"
                             data-breeze="https://livingwalls.in/wp-content/uploads/2022/06/compass.svg"
@@ -2025,7 +1603,7 @@
                         <img
                           width="2481"
                           height="3508"
-                          alt=""
+                          alt="image"
                           decoding="async"
                           loading="lazy"
                           data-breeze="https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-021_3BHK_South.png"
@@ -2051,7 +1629,7 @@
                           <img
                             width="64"
                             height="64"
-                            alt=""
+                            alt="image"
                             decoding="async"
                             loading="lazy"
                             data-breeze="https://livingwalls.in/wp-content/uploads/2022/06/compass.svg"
@@ -2112,7 +1690,7 @@
                         <img
                           width="2481"
                           height="5433"
-                          alt=""
+                          alt="image"
                           decoding="async"
                           loading="lazy"
                           data-breeze="https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-022_3BHK_Duplex_full-1.png"
@@ -2138,7 +1716,7 @@
                           <img
                             width="64"
                             height="64"
-                            alt=""
+                            alt="image"
                             decoding="async"
                             loading="lazy"
                             data-breeze="https://livingwalls.in/wp-content/uploads/2022/06/compass.svg"
@@ -2386,6 +1964,7 @@
                   alt="located"
                   class="detect"
                   id="detect1"
+                  loading="lazy"
                 />
                 <span id="timer1"></span>
                 <lottie-player
@@ -2411,10 +1990,6 @@
     <script
       src="assets//wp-content/themes/living-walls/assets/js/bootstrap.bundle.min.js"
       id="bootstrap.bundle-js"
-    ></script>
-    <script
-      src="assets//wp-content/themes/living-walls/assets/js/site.js"
-      id="site-js-js"
     ></script>
     <script
       src="assets//wp-content/plugins/breeze/assets/js/js-front-end/breeze-lazy-load.min.js"

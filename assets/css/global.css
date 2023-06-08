@@ -1,44 +1,73 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Hero-Regular, sans-serif;
+  font-weight: 400
+}
+
+.enquiry button,
+.enquiry1 button,
+.enquiryMain button {
+  width: 280px !important
+}
+
+.buttonDiv,
+.changeLink:hover,
+.checkboxWrapper span:last-of-type,
+.checkboxWrapper1 span:last-of-type,
+.headerText span:first-of-type,
+.otpVerification .boxWrapper p:last-of-type:hover {
+  font-weight: 700
+}
+
+.innerThankDiv,
+.modal {
+  bottom: 0;
+  left: 0;
+  right: 0
+}
+
 @font-face {
-  font-family: "Hero-Regular";
+  font-family: Hero-Regular;
   src: url("../font/Hero-New-Regular.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
+  font-display: swap
 }
 
 @font-face {
-  font-family: "Hero-Medium";
+  font-family: Hero-Medium;
   src: url("../font/Hero-New-Medium.otf") format("opentype");
   font-weight: 500;
   font-style: normal;
-  font-display: swap;
+  font-display: swap
 }
 
 @font-face {
-  font-family: "Hero-semiBold";
+  font-family: Hero-semiBold;
   src: url("../font/Hero-New-SemiBold.otf") format("opentype");
   font-weight: 600;
   font-style: normal;
-  font-display: swap;
+  font-display: swap
 }
 
-@import url("https://fonts.cdnfonts.com/css/hero-new");
-
 * {
-  box-sizing: border-box;
+  box-sizing: border-box
 }
 
 :root {
   --hero-regular: "Hero-Regular", sans-serif;
   --hero-semibold: "Hero-semiBold", sans-serif;
-  --hero-medium: "Hero-Medium", sans-serif;
+  --hero-medium: "Hero-Medium", sans-serif
 }
 
 body {
-  font-family: "Hero-Regular", sans-serif;
-  margin: 0px;
-  width: 100%;
-  font-weight: 400;
+  margin: 0;
+  width: 100%
 }
 
 h1,
@@ -47,24 +76,24 @@ h3,
 h4,
 h5,
 h6 {
-  clear: both;
-  font-family: "Hero-Regular", sans-serif;
-  font-weight: 400;
+  clear: both
 }
 
-.enquirBbutton:disabled {
+.enquirBbutton:disabled,
+.location button:disabled,
+.otpBbutton:disabled {
   cursor: not-allowed !important;
   background-color: #919191 !important;
-  color: rgba(239, 239, 239, 0.747);
+  color: rgba(239, 239, 239, .747)
 }
 
 .navImg {
-  height: 80px;
+  height: 80px
 }
 
 .modalBlur {
   filter: blur(5px);
-  pointer-events: none;
+  pointer-events: none
 }
 
 .buttonDiv {
@@ -84,30 +113,28 @@ h6 {
   gap: 20px;
   align-items: center;
   font-size: 20px;
-  color: #ffffff;
-  font-weight: bold;
+  color: #fff;
   cursor: pointer;
   width: max-content;
   padding-right: 30px;
-  transition: transform 1s, background-color 1s, border-radius 1s;
-  transition-timing-function: ease-out;
+  transition: transform 1s ease-out, background-color 1s ease-out, border-radius 1s ease-out
 }
 
 @keyframes callButton {
   from {
-    right: -50%;
+    right: -50%
   }
 
   to {
-    right: 0;
+    right: 0
   }
 }
 
 .buttonDiv a {
   text-decoration: none;
-  color: white;
+  color: #fff;
   display: flex;
-  align-items: center;
+  align-items: center
 }
 
 .callIcon {
@@ -118,45 +145,49 @@ h6 {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: tilt-shaking 0.3s infinite;
+  animation: .3s infinite tilt-shaking
+}
+
+.enquiry,
+.modalContainer {
+  background-color: #303538
+}
+
+.modal,
+.modalMain {
+  border-radius: 36px;
+  gap: 20px
 }
 
 @keyframes tilt-shaking {
-  0% {
-    transform: rotate(0deg);
+
+  0%,
+  100% {
+    transform: rotate(0)
   }
 
   25% {
-    transform: rotate(6deg);
+    transform: rotate(6deg)
   }
 
   50% {
-    transform: rotate(0eg);
+    transform: rotate(0eg)
   }
 
   75% {
-    transform: rotate(-6deg);
-  }
-
-  100% {
-    transform: rotate(0deg);
+    transform: rotate(-6deg)
   }
 }
 
 .phoneNo {
   padding-left: 20px;
-  transition: display 1s ease-out;
+  transition: display 1s ease-out
 }
 
 .modal {
-  border-radius: 36px;
-  display: flex;
   flex-direction: column;
-  width: min-content;
   height: min-content;
-  gap: 20px;
-  box-shadow: 7px 7px 7px #00000026;
-  position: relative;
+  box-shadow: 7px 7px 7px #00000026
 }
 
 .modalHeader {
@@ -164,183 +195,169 @@ h6 {
   gap: 20px;
   justify-content: center;
   align-items: center;
-  padding: 60px 40px 16px 40px;
+  padding: 60px 40px 16px
+}
+
+.modalContainer,
+.modalMain {
+  display: flex;
+  flex-direction: column
 }
 
 .innerModalHeader {
   padding-bottom: 12px;
   border-bottom: 1px solid #929496;
   display: flex;
-  gap: 20px;
+  gap: 20px
 }
 
 .modalMain {
-  border-radius: 36px;
-  display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 20px;
-  padding: 0px 70px 40px 70px;
+  padding: 0 70px 40px
 }
 
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
+.closeIcon,
+input {
+  padding: 20px
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
-  margin: 0;
+  margin: 0
 }
 
-input[type="number"] {
-  -moz-appearance: textfield;
+input[type=number] {
+  -moz-appearance: textfield
 }
 
-.modalMain Input:not(Input[type="checkbox"]):not(.otpInput),
+.modalMain Input:not(Input[type=checkbox]):not(.otpInput),
 button:not(.location button) {
   border: none;
   width: 100%;
   border-radius: 40px;
-  height: 40px;
+  height: 40px
 }
 
 .readMore {
   text-align: left;
-  display: inline;
+  display: inline
+}
+
+#displayMore,
+#displayMoreThree,
+#displayMoreTwo,
+#error,
+#readLess2,
+.loading,
+.modal {
+  display: none
 }
 
 .readMoreScroll {
   height: 40px;
-  overflow-y: scroll;
+  overflow-y: scroll
 }
 
-#displayMore,
-#displayMoreTwo,
-#displayMoreThree {
-  display: none;
+#readLess,
+button {
+  cursor: pointer
 }
 
-#readLess {
-  cursor: pointer;
-}
-
-#readLess1 {
-  display: none;
-  cursor: pointer;
-}
-
+#readLess1,
 #readLessButton {
   display: none;
-  cursor: pointer;
+  cursor: pointer
 }
 
 #readLess2 {
-  display: none;
-  color: #ffffff;
+  color: #fff
 }
 
-.modalMain button {
+.location button,
+.modalMain button,
+.otpVerification button {
   background-color: #d75e35;
-  color: #ffffff;
-}
-
-input {
-  padding: 20px;
-}
-
-button {
-  cursor: pointer;
+  color: #fff
 }
 
 .closeIcon {
   position: absolute;
   right: 0;
   top: 0;
-  cursor: pointer;
-  padding: 20px;
+  cursor: pointer
 }
 
 .modal {
-  display: none;
   position: fixed;
   vertical-align: middle;
   z-index: 999;
   top: 0;
-  bottom: 0;
   margin: auto;
-  /* Will not center vertically and won't work in IE6/7. */
-  left: 0;
-  width: 450px;
-  right: 0;
+  width: 450px
 }
 
-.modalContainer {
+.enquiry,
+.modalMain {
   display: flex;
-  flex-direction: column;
-  background-color: #303538;
+  flex-direction: column
 }
 
 .modalMain {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-items: center
 }
 
-.modalMain .boxWrapper {
-  width: 100% !important;
-}
-
+.modalMain .boxWrapper,
 .modalMain .iti {
-  width: 100% !important;
+  width: 100% !important
 }
 
 .iti--separate-dial-code .iti__selected-flag {
   background-color: unset !important;
-  border-right: 1px solid rgba(0, 0, 0, 0.05);
+  border-right: 1px solid rgba(0, 0, 0, .05)
 }
 
 .modalMain .iti__country-list {
-  width: 300px !important;
+  width: 300px !important
 }
 
 .modalMain .boxWrapper .checkboxWrapper {
-  color: black;
+  color: #000
 }
 
 .modalMain .section5Header {
-  padding-top: 0px !important;
-  font-size: 20px !important;
+  padding-top: 0 !important;
+  font-size: 20px !important
 }
 
 .modalMain .section5Header Img {
   height: 20px !important;
-  padding-top: 2px !important;
+  padding-top: 2px !important
 }
 
 .enquiry {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  background-color: #303538;
   gap: 40px 80px;
-  padding: 40px 40px 60px 40px;
+  padding: 40px 40px 60px
+}
+
+.boxWrapper,
+.enquiryMain {
+  display: flex;
+  flex-direction: column
 }
 
 .enquiryMain {
   width: 100%;
-  display: flex;
-  flex-direction: column;
   gap: 26px;
-  align-items: center;
+  align-items: center
 }
 
 .enquiryMain button {
   background-color: #d75e35;
-  color: #ffffff;
-  width: 280px !important;
-  align-self: center;
-}
-
-.enquiry button {
-  width: 280px !important;
+  color: #fff;
+  align-self: center
 }
 
 .enquirySubMain {
@@ -348,7 +365,7 @@ button {
   display: flex;
   justify-content: center;
   gap: 20px;
-  flex-wrap: wrap;
+  flex-wrap: wrap
 }
 
 .enquirySubMain .iti,
@@ -356,208 +373,169 @@ input:not(.otpInput) {
   width: 280px;
   border-radius: 36px;
   height: 40px;
-  border: none;
+  border: none
 }
 
 .checkboxWrapper {
   display: flex;
   gap: 5px;
-  color: white;
-  align-items: flex-start;
+  color: #fff;
+  align-items: flex-start
 }
 
-input[type="checkbox"] {
-  border-radius: 0px !important;
+input[type=checkbox] {
+  border-radius: 0 !important;
   cursor: pointer;
   accent-color: #ffd358;
   height: 14px !important;
   width: 14px !important;
-  outline: none !important;
+  outline: 0 !important;
   border: 1px solid #ffd358;
   font-size: 10px;
   transform: scale(1.3);
-  margin-top: 2px;
+  margin-top: 2px
+}
+
+.checkboxWrapper p,
+.checkboxWrapper span {
+  font-size: 12px;
+  color: #fff
 }
 
 .checkboxWrapper p {
-  margin: 0px;
-  color: white;
-  font-size: 12px;
-}
-
-.checkboxWrapper span {
-  color: white;
-  font-size: 12px;
+  margin: 0
 }
 
 .smallFont {
-  font-size: 12px !important;
-}
-
-.checkboxWrapper span:last-of-type {
-  font-weight: bold;
+  font-size: 12px !important
 }
 
 .section5Header {
   display: flex;
   font-size: 30px;
   margin: auto;
-  padding-top: 80px !important;
+  padding-top: 80px !important
 }
 
 .section5Header .headerText {
   padding-left: 4px;
-  color: white;
+  color: #fff;
   font-size: 26px !important;
-  font-family: "Arial" !important;
+  font-family: Arial !important
 }
 
-.enquiry .section5Header {
-  padding-top: 0px !important;
+.enquiry .section5Header,
+.otpVerification .section5Header {
+  padding-top: 0 !important
 }
 
-.headerText {
-  margin: 0px;
-}
-
-.headerText span:first-of-type {
-  font-weight: bold;
+.headerText,
+.sectionHeader {
+  margin: 0
 }
 
 .boxWrapper {
-  width: fit-content;
-  width: -moz-fit-content;
-  display: flex;
-  flex-direction: column;
   gap: 20px;
   align-items: center;
-  width: 60%;
+  width: 60%
+}
+
+.locationSection,
+.otpVerification {
+  padding: 40px;
+  flex-direction: column
 }
 
 .otpVerification {
   display: none;
-  flex-direction: column;
   align-items: center;
-  gap: 36px;
-  padding: 40px 40px 40px 40px;
+  gap: 36px
 }
 
 .otpVerification.myOtpVerification {
   gap: 30px;
-  padding: 0px 40px;
-}
-
-.otpVerification .section5Header {
-  padding-top: 0px !important;
+  padding: 0 40px
 }
 
 .otpVerification .boxWrapper {
   width: unset;
-  gap: 10px;
+  gap: 10px
 }
 
+.location p,
 .otpVerification .boxWrapper p {
-  margin: 0px;
-  color: #ffffff;
+  margin: 0;
+  color: #fff
 }
 
+.enquiry1 .location p,
 .otpVerification .boxWrapper.myBoxWrapper p {
-  color: #303538;
+  color: #303538
 }
 
 .otpVerification .boxWrapper p:last-of-type {
   text-decoration: underline;
   font-weight: 500;
-  cursor: pointer;
-}
-
-.otpVerification .boxWrapper p:last-of-type:hover {
-  font-weight: 700;
+  cursor: pointer
 }
 
 .inutContainer {
   display: flex;
   gap: 20px;
-  justify-content: center;
+  justify-content: center
 }
 
 .otpInput {
-  background-color: white;
-  color: black;
+  background-color: #fff;
+  color: #000;
   border: 1px solid #00000029;
   width: 60px;
   height: 60px;
   border-radius: 10px;
-  text-align: center;
+  text-align: center
 }
 
 .changeLink {
   color: #29a2c7;
   text-decoration: underline;
-  cursor: pointer;
-}
-
-.changeLink:hover {
-  font-weight: 700;
-}
-
-#error {
-  display: none;
-}
-
-.otpBbutton:disabled,
-.location button:disabled {
-  cursor: not-allowed !important;
-  background-color: #919191 !important;
-  color: rgba(239, 239, 239, 0.747);
-}
-
-.otpVerification button,
-.location button {
-  background-color: #d75e35;
-  color: #ffffff;
+  cursor: pointer
 }
 
 .locationSection {
-  padding: 40px 40px 40px 40px;
   display: flex;
-  flex-direction: column;
   gap: 20px;
   width: 100%;
-  align-items: center;
+  align-items: center
 }
 
-.enquiry .locationSection {
-  padding: 0px;
+.enquiry .locationSection,
+.enquiry .otpVerification {
+  padding: 0
 }
 
 .enquiry1 .locationSection {
-  padding: 0 40px;
-}
-
-.enquiry .otpVerification {
-  padding: 0px;
+  padding: 0 40px
 }
 
 .location {
   display: none;
   flex-direction: column;
-  align-items: center;
+  align-items: center
 }
 
 .location .ThankYou {
-  font-size: 24px;
+  font-size: 24px
 }
 
 #timer {
   display: none;
-  padding-left: 4px;
+  padding-left: 4px
 }
 
 .headerModal {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center
 }
 
 .location .consentText {
@@ -565,16 +543,7 @@ input[type="checkbox"] {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  font-size: 16px;
-}
-
-.location p {
-  margin: 0px;
-  color: #ffffff;
-}
-
-.enquiry1 .location p {
-  color: #303538;
+  font-size: 16px
 }
 
 .location button {
@@ -588,288 +557,264 @@ input[type="checkbox"] {
   height: 40px;
   animation-duration: 3s;
   animation-name: expand;
-  animation-iteration-count: infinite;
+  animation-iteration-count: infinite
+}
+
+.enquiry1,
+.enquiryMain1 {
+  flex-direction: column;
+  width: 100%
 }
 
 @keyframes expand {
-  0% {
-    transform: scale(1);
+
+  0%,
+  100% {
+    transform: scale(1)
   }
 
   50% {
-    transform: scale(0.8);
-  }
-
-  100% {
-    transform: scale(1);
+    transform: scale(.8)
   }
 }
 
 .location button img {
-  width: 20px;
-}
-
-.loading {
-  display: none;
+  width: 20px
 }
 
 .numberText,
 .numberText1 {
-  color: #ffffff;
+  color: #fff
 }
 
 .getCall {
   margin-top: 0;
   padding-left: 0;
-  margin-bottom: 28px;
+  margin-bottom: 28px
 }
 
 .enquiry1 {
   margin-top: 100px;
-  width: 100%;
   display: flex;
-  flex-direction: column;
   gap: 30px;
-  padding: 0 5%;
+  padding: 0 5%
 }
 
-.enquiry1 button {
-  width: 280px !important;
-}
-
-.sectionHeader {
-  margin: 0;
+.boxWrapper1,
+.enquiryMain1,
+.enquirySubMain1,
+.enquirySubSubMain1 {
+  gap: 20px;
+  display: flex
 }
 
 .sectionHeader .headerText {
   font-size: 32px;
-  padding-left: 36px;
+  padding-left: 36px
 }
 
 .enquiryMain1 {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: wrap
 }
 
 .enquiryMain1 button {
   background-color: #d75e35;
-  color: #ffffff;
-  width: 280px !important;
+  color: #fff;
+  width: 280px !important
 }
 
-.enquiryMain1 input:not([type="checkbox"]) {
+.enquiryMain1 input:not([type=checkbox]) {
   border: 1px solid #bcbcbc;
   border-radius: 36px;
   width: 280px;
-  height: 40px;
+  height: 40px
 }
 
-.enquiryMain1 input[type="checkbox"] {
-  margin-top: 6px;
+.enquiryMain1 input[type=checkbox] {
+  margin-top: 6px
 }
 
 .enquirySubMain1 {
-  display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: start;
-  gap: 20px;
-  max-width: 880px;
+  max-width: 880px
 }
 
 .enquirySubMain1 .iti,
 input {
   width: 280px;
   border-radius: 36px;
-  height: 40px;
+  height: 40px
 }
 
 .enquirySubSubMain1 {
   width: 100%;
-  display: flex;
   justify-content: start;
-  gap: 20px;
-  flex-wrap: wrap;
+  flex-wrap: wrap
 }
 
 .boxWrapper1 {
-  display: flex;
   flex-direction: column;
-  gap: 20px;
   align-items: center;
-  width: 100%;
+  width: 100%
 }
 
 .checkboxWrapper1 {
   display: flex;
   gap: 5px;
-  align-items: flex-start;
-}
-
-.checkboxWrapper1 span:last-of-type {
-  font-weight: bold;
+  align-items: flex-start
 }
 
 .footer {
   display: flex;
   justify-content: space-between;
-  padding: 10px;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding: 10px 40px;
   background-color: #919191;
   width: 100%;
   text-align: left;
-  color: white;
-  font-size: 12px;
+  color: #fff;
+  font-size: 12px
 }
 
+.center-line:before,
 .color-heading::before,
 .colored-text::before,
-.heading-text-row::before,
 .grey-text-wrap:after,
-.left-plus::after,
-.center-line:before {
-  background: url(../images/plus-icon-colored.png) no-repeat center center !important;
+.heading-text-row::before,
+.left-plus::after {
+  background: url(../images/plus-icon-colored.png) center center no-repeat !important
 }
 
-@media (max-width: 980px) {
+@media (max-width:980px) {
   .sectionHeader .headerText {
-    text-align: center;
+    text-align: center
   }
 
   .enquirySubSubMain1 {
-    justify-content: center;
+    justify-content: center
   }
 
   .boxWrapper1 {
-    align-items: center;
+    align-items: center
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width:768px) {
+
+  .buttonDiv .phoneNo,
+  .modal {
+    display: none
+  }
+
   .newImg {
-    width: 200px !important;
+    width: 200px !important
+  }
+
+  .boxWrapper,
+  .enquiryMain button,
+  .enquiryMain1 button,
+  .enquirySubMain .iti,
+  .enquirySubMain1 .iti,
+  input {
+    width: 100% !important
   }
 
   .footer {
     flex-direction: column;
     gap: 6px;
     padding-left: 20px;
-    font-size: 10px;
+    font-size: 10px
+  }
+
+  .enquiry,
+  .enquiry1,
+  .enquiryMain {
+    gap: 30px !important
   }
 
   .footer p {
-    margin: 0px;
+    margin: 0
   }
 
   .section5Header {
     font-size: 20px !important;
-    margin: unset !important;
+    margin: unset !important
   }
 
   .section5Header Img {
     height: 22px !important;
-    padding-top: 4px !important;
+    padding-top: 4px !important
   }
 
   .enquiry {
-    padding: 30px 30px 46px 30px !important;
-    gap: 30px !important;
-    align-items: center;
+    padding: 30px 30px 46px !important;
+    align-items: center
   }
 
   .boxWrapper {
-    width: 100% !important;
-    padding: 0px;
-    font-size: 14px;
-  }
-
-  .enquiryMain {
-    gap: 30px !important;
-  }
-
-  .enquiryMain button {
-    width: 100% !important;
+    padding: 0;
+    font-size: 14px
   }
 
   .enquiry1 {
     padding: 0 30px !important;
-    gap: 30px !important;
-    align-items: center;
+    align-items: center
   }
 
+  .my-detailed-plan-inner,
   .sectionHeader .headerText {
-    padding: 0;
-  }
-
-  .enquiryMain1 button {
-    width: 100% !important;
-  }
-
-  .enquirySubMain1 .iti,
-  input {
-    width: 100% !important;
+    padding: 0
   }
 
   .callIcon {
     width: 44px;
-    height: 44px;
+    height: 44px
   }
 
   .buttonDiv {
     top: 40px;
-    background-color: transparent;
-  }
-
-  .buttonDiv .phoneNo {
-    display: none;
+    background-color: transparent
   }
 
   .modal {
-    display: none;
     position: fixed;
     vertical-align: middle;
     z-index: 999;
     top: 0;
     bottom: 0;
     margin: auto;
-    /* Will not center vertically and won't work in IE6/7. */
     left: 0;
     width: 95% !important;
     right: 0;
-    border-radius: 50px !important;
+    border-radius: 50px !important
   }
 
   .modalHeader {
-    padding: 48px 20px 16px 20px;
+    padding: 48px 20px 16px
   }
 
   .modalMain {
-    padding: 0px 20px 40px 20px;
+    padding: 0 20px 40px
   }
 
-  input[type="checkbox"] {
+  input[type=checkbox] {
     transform: scale(1) !important;
-    padding-bottom: 4px !important;
-  }
-
-  .enquirySubMain .iti,
-  input {
-    width: 100% !important;
-  }
-
-  .my-detailed-plan-inner {
-    padding: 0;
+    padding-bottom: 4px !important
   }
 
   .my-detailed-plan-right {
-    padding-right: 20px;
+    padding-right: 20px
   }
+}
+
+.innerThankDiv,
+.mainInner,
+.mainInnerDiv {
+  width: 100%;
+  display: flex
 }
 
 .innerThankDiv {
@@ -877,59 +822,50 @@ input {
   align-self: center;
   justify-self: center;
   top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  display: flex;
-  width: 100%;
+  margin: auto
 }
 
 .mainInnerDiv {
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  gap: 10px;
+  gap: 10px
 }
 
 .mainInner {
-  display: flex;
   gap: 20px;
-  width: 100%;
   justify-content: center;
-  align-items: center;
+  align-items: center
 }
 
 .mainInner img {
   height: auto;
-  height: fit-content;
+  height: fit-content
 }
 
 .thankyou {
   display: flex;
-  align-items: center;
+  align-items: center
 }
 
 .thankyou p {
   margin: 10px;
-  font-size: 28px;
+  font-size: 28px
 }
 
 .contact {
-  font-size: 20px;
+  font-size: 20px
 }
 
 #propertyNameId {
   border-left: 1px solid #034867;
   padding-left: 20px;
   display: flex;
-  align-items: center;
+  align-items: center
 }
 
 #propertyNameId p {
   color: #fff;
   font-size: 20px;
-  margin: 0;
+  margin: 0
 }
