@@ -2,7 +2,7 @@ body,
 h1,
 h2,
 h3,
-h4,
+amenities-content,
 h5,
 h6 {
   font-family: Hero-Regular, sans-serif;
@@ -871,17 +871,96 @@ input {
 }
 
 .project-banner {
-  background-image: url('../images/backgroundImage.webp');
+  background-image: linear-gradient(rgba(0, 0, 0, .2),
+      rgba(0, 0, 0, .2)), url('../images/backgroundImage.webp');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
+.book_now {
+  cursor: pointer;
+  width: 150px;
+  padding: 10px 30px;
+  background-color: #d75e35;
+  color: #ffffff;
+  border-radius: 324px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.bottom-code {
+  bottom: -40px;
+}
+
+.bottom-code p {
+  font-size: 13px !important;
+}
+
+.grey-text-wrap h4 {
+  color: #757575;
+}
+
+/* .facilities-text {
+  flex-wrap: wrap;
+  justify-content: space-between;
+} */
+
+.amenities-container .row {
+  flex-wrap: nowrap;
+}
+
+.image-content-layout5,
+.image-content-layout4 {
+  margin-top: 20px;
+}
+
 @media (max-width: 767px) {
   .project-banner {
-    background-image: url('../images/backgroundImageMobile.webp');
+    background-image: linear-gradient(rgba(0, 0, 0, .2),
+        rgba(0, 0, 0, .2)), url('../images/backgroundImageMobile.webp');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
   }
+
+  .heading-content-repeat {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .image-content-layout5,
+  .image-content-layout4 {
+    margin-top: 20px;
+  }
+
+  .download-brochure {
+    margin-top: 20px;
+  }
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  z-index: 1;
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+.newStyle {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: 30px;
+}
+
+.headerMainText {
+  z-index: 2;
 }
