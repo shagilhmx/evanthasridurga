@@ -5166,19 +5166,14 @@ li.bottom-logo {
 }
 
 .iframe-heading {
-  position: absolute;
-  text-align: right;
-  color: #fff;
+  text-align: center;
+  color: #757575;
   font-size: 28px;
   font-weight: 600;
   font-style: normal;
   letter-spacing: .35px;
-  text-align: right;
-  margin: 41px auto 0 auto;
-  display: block;
-  width: 100%;
-  padding-right: 45px;
-  right: 0
+  z-index: 2;
+  margin-bottom: 40px;
 }
 
 .form-control:focus {
@@ -5524,6 +5519,12 @@ li.bottom-logo {
 
   .project-two .project-image {
     height: auto
+  }
+
+  .iframe-heading {
+    margin-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 
@@ -6031,7 +6032,7 @@ li.bottom-logo {
     font-style: normal;
     letter-spacing: .6px;
     line-height: 1.4;
-    max-width: 415px
+    text-align: center;
   }
 }
 
@@ -6463,7 +6464,6 @@ li.bottom-logo {
     font-style: normal;
     letter-spacing: .6px;
     line-height: 1.1;
-    max-width: 100%
   }
 
   .top-line.plan-description:after {
@@ -6613,11 +6613,6 @@ li.bottom-logo {
     min-width: 126px
   }
 
-  .iframe-heading {
-    max-width: 1068px;
-    padding-right: 0;
-    left: 0
-  }
 }
 
 @media screen and (min-width:1366px) {

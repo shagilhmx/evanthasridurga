@@ -964,3 +964,52 @@ input {
 .headerMainText {
   z-index: 2;
 }
+
+#iframe-location {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
+  width: 100%;
+  position: relative;
+}
+
+.iframe-container {
+  width: 60%;
+  height: 100%;
+}
+
+@media (max-width: 767px) {
+  #iframe-location {
+    margin-bottom: 40px;
+    margin-top: 20px;
+  }
+
+  .iframe-container {
+    width: 80%;
+    height: 100%;
+  }
+}
+
+.enquiryMain1 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: start;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.boxWrapper1 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: start;
+  width: 100%;
+}
+
+@media (max-width: 1280px) {
+  .boxWrapper1 {
+    align-items: center;
+  }
+}
