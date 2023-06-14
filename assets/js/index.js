@@ -341,7 +341,9 @@ function openApi(e, t) {
                   `<strong> +${intl.getSelectedCountryData()?.dialCode}-${
                     document.getElementById("phoneNumber")?.value
                   }</strong>`),
-                (responseData = e))
+                (responseData = e, !0 === downloadPdf &&
+                  (document.getElementById("pdfDownload").click(),
+                  (downloadPdf = !1))))
               : 2 == t
               ? (document
                   .querySelector(".enquiry .section5Header")
@@ -356,7 +358,7 @@ function openApi(e, t) {
                   }</strong>`),
                 (responseData = e))
                 : 3 == t
-                ? (document
+                && (document
                     .querySelector(".enquiry1 .sectionHeader")
                     .setAttribute("style", "display: none"),
                   (document.getElementById("enquiryMain1").style.display =
@@ -369,9 +371,6 @@ function openApi(e, t) {
                       document.getElementById("phone1")?.value
                     }</strong>`),
                   (responseData = e))
-                : !0 === downloadPdf &&
-                  (document.getElementById("pdfDownload").click(),
-                  (downloadPdf = !1))
               : setTimeout(() => {
                   window.location.href = "thankyou.html";
                 }, 1e3);
