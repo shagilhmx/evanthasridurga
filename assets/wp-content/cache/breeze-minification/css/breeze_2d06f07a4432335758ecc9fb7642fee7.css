@@ -4304,7 +4304,11 @@ header.site-header {
 }
 
 .site-logo {
-  width: 86px
+  width: 100%
+}
+
+.site-logo img {
+  width: 200px
 }
 
 .site-logo #lottie {
@@ -5541,7 +5545,7 @@ li.bottom-logo {
   }
 
   .site-logo {
-    width: 182px
+    width: 100%
   }
 
   .site-logo #lottie {
@@ -5558,7 +5562,7 @@ li.bottom-logo {
   }
 
   .site-logo img {
-    width: 182px
+    width: 260px
   }
 
   footer.site-footer {
@@ -6051,7 +6055,7 @@ li.bottom-logo {
   }
 
   .banner-logo .site-logo {
-    width: 99px
+    width: 100%;
   }
 
   .main-logo-wrap {
@@ -6622,7 +6626,7 @@ li.bottom-logo {
   }
 
   .site-logo img {
-    width: 284px
+    width: 280px
   }
 
   .banner-btn-wrap {
