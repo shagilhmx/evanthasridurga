@@ -218,7 +218,8 @@ h6 {
 }
 
 .closeIcon,
-input {
+input,
+input[type=tel] {
   padding: 20px
 }
 
