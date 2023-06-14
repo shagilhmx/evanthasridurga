@@ -328,9 +328,6 @@ function openApi(e, t) {
       .post("http://api-dcrm-dev.fincity.in/open/opportunity", d)
       .then((e) => {
         gtag_report_conversion(),
-          !0 === downloadPdf &&
-            (document.getElementById("pdfDownload").click(),
-            (downloadPdf = !1)),
           a
             ? 1 == t
               ? ((document.getElementById("modalHeader").style.display =
@@ -371,6 +368,9 @@ function openApi(e, t) {
                   `<strong> +${intl1.getSelectedCountryData()?.dialCode}-${
                     document.getElementById("phone1")?.value
                   }</strong>`),
+                  !0 === downloadPdf &&
+            (document.getElementById("pdfDownload").click(),
+            (downloadPdf = !1)),
                 (responseData = e))
             : setTimeout(() => {
                 window.location.href = "thankyou.html";
