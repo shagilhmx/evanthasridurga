@@ -340,10 +340,8 @@ function openApi(e, t) {
                   document.querySelector("#numberText").innerText +
                   `<strong> +${intl.getSelectedCountryData()?.dialCode}-${
                     document.getElementById("phoneNumber")?.value
-                  }</strong>`),
-                (responseData = e, !0 === downloadPdf &&
-                  (document.getElementById("pdfDownload").click(),
-                  (downloadPdf = !1))))
+                  }</strong>`)
+                )
               : 2 == t
               ? (document
                   .querySelector(".enquiry .section5Header")
@@ -514,6 +512,9 @@ function verfiyOtp(e, t) {
   axios
     .post("http://api-dcrm-dev.fincity.in/open/opportunity/verify", l)
     .then((e) => {
+      (responseData = e, !0 === downloadPdf &&
+        (document.getElementById("pdfDownload").click(),
+        (downloadPdf = !1))),
       (document.getElementById(
         1 == t
           ? "otpVerification"
