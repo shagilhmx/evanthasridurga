@@ -355,26 +355,26 @@ function openApi(e, t) {
                     document.getElementById("phone")?.value
                   }</strong>`),
                 (responseData = e))
-              : 3 == t &&
-                (document
-                  .querySelector(".enquiry1 .sectionHeader")
-                  .setAttribute("style", "display: none"),
-                (document.getElementById("enquiryMain1").style.display =
-                  "none"),
-                (document.getElementById("otpVerification2").style.display =
-                  "flex"),
-                (document.querySelector("#numberText2").innerHTML =
-                  document.querySelector("#numberText2").innerText +
-                  `<strong> +${intl1.getSelectedCountryData()?.dialCode}-${
-                    document.getElementById("phone1")?.value
-                  }</strong>`),
-                  !0 === downloadPdf &&
-            (document.getElementById("pdfDownload").click(),
-            (downloadPdf = !1)),
-                (responseData = e))
-            : setTimeout(() => {
-                window.location.href = "thankyou.html";
-              }, 1e3);
+                : 3 == t
+                ? (document
+                    .querySelector(".enquiry1 .sectionHeader")
+                    .setAttribute("style", "display: none"),
+                  (document.getElementById("enquiryMain1").style.display =
+                    "none"),
+                  (document.getElementById("otpVerification2").style.display =
+                    "flex"),
+                  (document.querySelector("#numberText2").innerHTML =
+                    document.querySelector("#numberText2").innerText +
+                    `<strong> +${intl1.getSelectedCountryData()?.dialCode}-${
+                      document.getElementById("phone1")?.value
+                    }</strong>`),
+                  (responseData = e))
+                : !0 === downloadPdf &&
+                  (document.getElementById("pdfDownload").click(),
+                  (downloadPdf = !1))
+              : setTimeout(() => {
+                  window.location.href = "thankyou.html";
+                }, 1e3);
       })
       .catch((e) => {
         (document.getElementById(
