@@ -258,8 +258,7 @@ function openModal() {
   let e = document.getElementById("page"),
     t = document.getElementById("callButton");
   e.classList.add("modalBlur"),
-    t.classList.add("modalBlur"),
-    (downloadPdf = !0);
+    t.classList.add("modalBlur")
 }
 function closeModal() {
   document.getElementById("modal").style.display = "none";
