@@ -529,7 +529,7 @@ function verfiyOtp(e, t) {
           if (0 == --n) {
             let t = getDeviceType();
             clearInterval(l),
-              (window.location.href = `https://dcrm-dev.fincity.com/?&user=consumer&device-type=${t}&token=${e?.data?.consumerToken}&isLandingPage=true`);
+              (window.location.href = `https://dcrm-dev.fincity.in/?&user=consumer&device-type=${t}&token=${e?.data?.consumerToken}&isLandingPage=true`);
           }
         }, 1e3);
     })
