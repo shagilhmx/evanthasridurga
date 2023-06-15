@@ -1082,6 +1082,26 @@ input {
   font-size: 32px;
 }
 
+.bgImage {
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  background-image: url('../images/backgroundImage2.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.bgImage1 {
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  background-image: url('../images/backgroundImage3.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 @media (max-width: 767px) {
   .modal.fade {
     width: fit-content;
@@ -1106,5 +1126,13 @@ input {
 
   .amenities-container {
     padding-left: 30px;
+  }
+
+  .bgImage {
+    background-image: url('../images/backgroundImage2Mobile.webp');
+  }
+
+  .bgImage1 {
+    background-image: url('../images/backgroundImage3Mobile.webp');
   }
 }
