@@ -56,6 +56,7 @@
     <!-- my script -->
 
     <!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) -->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=AW-10852030635"
@@ -69,10 +70,8 @@
 
       gtag("config", "AW-10852030635");
     </script>
-    <!-- Event snippet for Living Walls - Olde Town Submit Lead Form conversion page
-          In your html page, add the snippet and call gtag_report_conversion when someone clicks 
-          on the chosen link or button. 
-    -->
+    <!-- Event snippet for Earthen Ambience - Submit Lead Form conversion page
+    In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
     <script>
       function gtag_report_conversion(url) {
         var callback = function () {
@@ -81,7 +80,7 @@
           }
         };
         gtag("event", "conversion", {
-          send_to: "AW-10852030635/vU44CODlv5YYEKux07Yo",
+          send_to: "AW-10852030635/udX_CPei6KsYEKux07Yo",
           event_callback: callback,
         });
         return false;
@@ -113,23 +112,6 @@
     <link rel="icon" href="assets/images/Group-2.png" sizes="192x192" />
     <link rel="apple-touch-icon" href="assets/images/Group-2.png" />
     <meta name="msapplication-TileImage" content="assets/images/Group-2.png" />
-
-    <!-- Google Tag Manager -->
-    <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({
-          "gtm.start": new Date().getTime(),
-          event: "gtm.js",
-        });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-M356D67");
-    </script>
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -145,20 +127,32 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
-    <!-- End Google Tag Manager -->
   </head>
 
   <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript>
-      <iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-M356D67"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe>
-    </noscript>
-    <!-- End Google Tag Manager (noscript) -->
+    <div
+      class="modal fade"
+      id="imageModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="imageModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+          onclick="closeModalSlide()"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="modal-body">
+          <img id="modalImage" src="" alt="Image" />
+        </div>
+      </div>
+    </div>
 
     <div class="modal" id="modal">
       <img
@@ -411,24 +405,21 @@
                   </div>
                 </div>
               </div>
-              <div class="row">
+              <div class="row" id="banner">
                 <div class="col-lg-10 col-md-10 col-12">
                   <div class="project-banner-content white-banner">
-                    <h1>Earthen Ambience</h1>
                     <div class="project-description">
-                      <p>Deliberately Modern 3BHK & 4BHK Flats in Sarjapur.</p>
+                      <p>Ultra luxury 3 BHK & 4 BHK row villas</p>
                     </div>
                     <h5>Starting at &#8377;1.88 Crore</h5>
                     <div class="book_now" onclick="openModal()">Book Now</div>
                   </div>
-                  <div class="bottom-code">
-                    <p class="mb-0">
-                      RERA No. PRM/KA/RERA/1251/308/PR/210323/005811
-                    </p>
-                  </div>
                 </div>
               </div>
             </div>
+          </div>
+          <div class="bottom-code-one">
+            <p class="mb-0">RERA No. PRM/KA/RERA/1251/308/PR/210323/005811</p>
           </div>
         </section>
         <!-- form submission container -->
@@ -680,13 +671,7 @@
                     <div class="inner-content">
                       <h5>52 Villas</h5>
                       <div class="content-text">
-                        A deliberately small community
-                      </div>
-                    </div>
-                    <div class="inner-content">
-                      <h5>Work Pods</h5>
-                      <div class="content-text">
-                        Optional detached private offices
+                        Boutique home community spread over approx. 2.5 Acres
                       </div>
                     </div>
                   </div>
@@ -745,36 +730,17 @@
                     <div class="row">
                       <div class="col-lg-4">
                         <div class="heading-and-content">
-                          <h4>2.2Km - Azim Premji University</h4>
+                          <h4>Located on proposed 150ft road</h4>
                         </div>
                       </div>
                       <div class="col-lg-4">
                         <div class="heading-and-content">
-                          <h4>350m - Indus International School</h4>
+                          <h4>10 mins from Prestige city</h4>
                         </div>
                       </div>
                       <div class="col-lg-4">
                         <div class="heading-and-content">
-                          <h4>3.9Km - Dmart Store</h4>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-lg-4">
-                        <div class="heading-and-content">
-                          <h4>3.7Km - Infosys Head Quarters</h4>
-                        </div>
-                      </div>
-                      <div class="col-lg-4">
-                        <div class="heading-and-content">
-                          <h4>
-                            5.3Km - Spandana Heart & Super Speciality Hospital
-                          </h4>
-                        </div>
-                      </div>
-                      <div class="col-lg-4">
-                        <div class="heading-and-content">
-                          <h4>1.6Km - KL Bros Resto Cafe</h4>
+                          <h4>1km from proposed STRR road</h4>
                         </div>
                       </div>
                     </div>
@@ -834,21 +800,19 @@
                   <div class="row">
                     <div class="col-lg-7 col-md-12">
                       <div class="simple-text">
-                        The apartment development is deliberately modern, and
-                        the unapologetic lines of the building are intentional.
-                        The slatted front facade in corten steel adds to this
-                        aesthetic. As a material choice, corten steel is a
-                        resilient form of steel that ages well.
+                        In development, we used environmentally friendly facade
+                        materials, terracotta tiles for terrace & solar
+                        provision. 8ft Doors & Windows makes it Naturally Well
+                        Lit and ventilated homes.
                       </div>
                     </div>
                     <div class="col-lg-5 col-md-12">
                       <div class="heading-text-row">
                         <div class="inner-content">
                           <div class="content-text">
-                            Coming inside, the &lsquo;Open Plan Blueprint&rsquo;
-                            aims to repackage the familiar flavour of an
-                            independent house with a living area that opens into
-                            a garden.
+                            The project is conceptualised to offer a calming
+                            experience, creating its own micro climate away from
+                            the hustle of city life.
                           </div>
                         </div>
                       </div>
@@ -857,15 +821,15 @@
                 </div>
                 <div class="col-lg-4 col-md-5">
                   <div class="colored-text">
-                    Recapture the charm of living in an independent house with a
-                    garden.
+                    Experience the enchantment of lush greenery, where nature’s
+                    magic comes to life.
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
-        <section class="image-content-layout">
+        <section class="image-content-layout5">
           <div class="container">
             <div class="image-content-wrap">
               <div class="row gx-5 gx-md-4 gx-lg-4">
@@ -885,8 +849,10 @@
                   <div class="layout-content">
                     <h5>Club House</h5>
                     <p>
-                      The modern slatted frontage built with Corten Steel will
-                      weather well
+                      A clubhouse with a co-working space, a library and a gym
+                      are all part of the indoor amenities, while the infinity
+                      swimming pool, kids play pool and corners for the elderly
+                      allow for unwinding zones
                     </p>
                   </div>
                 </div>
@@ -902,8 +868,10 @@
                   <div class="layout-content">
                     <h5>Backyard</h5>
                     <p>
-                      The building has two basement levels. Each apartment has
-                      two dedicated car parks.
+                      This was one of the key considerations for every home, to
+                      have its own large private garden. The garden could just
+                      be an extension of the dining, or could be an active party
+                      space or could just be a zone for quiet reading.
                     </p>
                   </div>
                 </div>
@@ -944,7 +912,7 @@
                 <div class="col-xl-4 col-lg-4 col-md-5 col-12">
                   <div class="layout-content">
                     <h5>Rooftop swimming pool</h5>
-                    <p>Placed for the best privacy</p>
+                    <p>Infinity pool with covered deck</p>
                   </div>
                 </div>
               </div>
@@ -958,7 +926,10 @@
                 <div class="col-xl-4 col-lg-4 col-md-5 col-12">
                   <div class="layout-content">
                     <h5>Terrace Bar</h5>
-                    <p>Your private garden</p>
+                    <p>
+                      Place for the best privacy which could also be a place
+                      where the entire family could connect in an activity
+                    </p>
                   </div>
                 </div>
                 <div
@@ -1070,7 +1041,8 @@
               <div class="row">
                 <div class="col-lg-9 col-md-6">
                   <div class="top-line pro-detail-box">
-                    <h2>3BHK with 1 Car Parking</h2>
+                    <h2>Lavender</h2>
+                    <h4><strong>3BHK with 1 Car Parking</strong></h4>
                     <h4><strong>Starting at 1.88 Cr</strong></h4>
                     <h4 class="plan-sft"><em>2479 Sq.Ft.</em></h4>
                   </div>
@@ -1078,73 +1050,12 @@
                 <div class="detailed-plan-wrap">
                   <div class="detailed-plan-inner my-detailed-plan-inner">
                     <div class="row">
-                      <div
-                        id="carouselExampleControls1"
-                        class="carousel slide"
-                        data-ride="carousel"
-                      >
-                        <div class="carousel-inner">
-                          <div class="carousel-item active">
-                            <img
-                              class="d-block w-100"
-                              src="assets/images/floor plans/floorPlan(5).webp"
-                              alt="First slide"
-                            />
-                          </div>
-                          <div class="carousel-item">
-                            <img
-                              class="d-block w-100"
-                              src="assets/images/floor plans/floorPlan(6).webp"
-                              alt="Second slide"
-                            />
-                          </div>
-                          <div class="carousel-item">
-                            <img
-                              class="d-block w-100"
-                              src="assets/images/floor plans/floorPlan(7).webp"
-                              alt="Third slide"
-                            />
-                          </div>
-                          <div class="carousel-item">
-                            <img
-                              class="d-block w-100"
-                              src="assets/images/floor plans/floorPlan(8).webp"
-                              alt="Fourth slide"
-                            />
-                          </div>
-                          <div class="carousel-item">
-                            <img
-                              class="d-block w-100"
-                              src="assets/images/floor plans/floorPlan(9).webp"
-                              alt="Fifth slide"
-                            />
-                          </div>
-                        </div>
-                        <a
-                          class="carousel-control-prev"
-                          href="#carouselExampleControls1"
-                          role="button"
-                          data-slide="prev"
-                        >
-                          <span
-                            class="carousel-control-prev-icon"
-                            aria-hidden="true"
-                          ></span>
-                          <span class="sr-only">Previous</span>
-                        </a>
-                        <a
-                          class="carousel-control-next"
-                          href="#carouselExampleControls1"
-                          role="button"
-                          data-slide="next"
-                        >
-                          <span
-                            class="carousel-control-next-icon"
-                            aria-hidden="true"
-                          ></span>
-                          <span class="sr-only">Next</span>
-                        </a>
-                      </div>
+                      <img
+                        class="d-block w-100"
+                        src="assets/images/floor plans/Lavendar.webp"
+                        alt="First slide"
+                        onclick="openModalSlide('assets/images/floor plans/Lavendar.webp')"
+                      />
                     </div>
                   </div>
                 </div>
@@ -1159,7 +1070,8 @@
               <div class="row">
                 <div class="col-lg-9 col-md-6">
                   <div class="top-line pro-detail-box">
-                    <h2>4BHK with 1 Car Parking</h2>
+                    <h2>Brookside</h2>
+                    <h4><strong>4BHK with 1 Car Parking</strong></h4>
                     <h4><strong>Starting at 2.26 Cr</strong></h4>
                     <h4 class="plan-sft"><em>3006 Sq.Ft.</em></h4>
                   </div>
@@ -1167,52 +1079,12 @@
                 <div class="detailed-plan-wrap">
                   <div class="detailed-plan-inner my-detailed-plan-inner">
                     <div class="row">
-                      <div
-                        id="carouselExampleControls2"
-                        class="carousel slide"
-                        data-ride="carousel"
-                      >
-                        <div class="carousel-inner">
-                          <div class="carousel-item active">
-                            <img
-                              class="d-block w-100"
-                              src="assets/images/floor plans/floorPlan(1).webp"
-                              alt="First slide"
-                            />
-                          </div>
-                          <div class="carousel-item">
-                            <img
-                              class="d-block w-100"
-                              src="assets/images/floor plans/floorPlan(2).webp"
-                              alt="Second slide"
-                            />
-                          </div>
-                        </div>
-                        <a
-                          class="carousel-control-prev"
-                          href="#carouselExampleControls2"
-                          role="button"
-                          data-slide="prev"
-                        >
-                          <span
-                            class="carousel-control-prev-icon"
-                            aria-hidden="true"
-                          ></span>
-                          <span class="sr-only">Previous</span>
-                        </a>
-                        <a
-                          class="carousel-control-next"
-                          href="#carouselExampleControls2"
-                          role="button"
-                          data-slide="next"
-                        >
-                          <span
-                            class="carousel-control-next-icon"
-                            aria-hidden="true"
-                          ></span>
-                          <span class="sr-only">Next</span>
-                        </a>
-                      </div>
+                      <img
+                        class="d-block w-100"
+                        src="assets/images/floor plans/Brookside.webp"
+                        alt="First slide"
+                        onclick="openModalSlide('assets/images/floor plans/Brookside.webp')"
+                      />
                     </div>
                   </div>
                 </div>
@@ -1227,7 +1099,8 @@
               <div class="row">
                 <div class="col-lg-9 col-md-6">
                   <div class="top-line pro-detail-box">
-                    <h2>4BHK with 2 Car Parking</h2>
+                    <h2>Primrose</h2>
+                    <h4><strong>4BHK with 2 Car Parking</strong></h4>
                     <h4><strong>Starting at 2.76 Cr</strong></h4>
                     <h4 class="plan-sft"><em>3649 Sq.Ft.</em></h4>
                   </div>
@@ -1235,59 +1108,12 @@
                 <div class="detailed-plan-wrap">
                   <div class="detailed-plan-inner my-detailed-plan-inner">
                     <div class="row">
-                      <div
-                        id="carouselExampleControls3"
-                        class="carousel slide"
-                        data-ride="carousel"
-                      >
-                        <div class="carousel-inner">
-                          <div class="carousel-item active">
-                            <img
-                              class="d-block w-100"
-                              src="assets/images/floor plans/floorPlan0.webp"
-                              alt="First slide"
-                            />
-                          </div>
-                          <div class="carousel-item">
-                            <img
-                              class="d-block w-100"
-                              src="assets/images/floor plans/floorPlan1.webp"
-                              alt="Second slide"
-                            />
-                          </div>
-                          <div class="carousel-item">
-                            <img
-                              class="d-block w-100"
-                              src="assets/images/floor plans/floorPlan2.webp"
-                              alt="Third slide"
-                            />
-                          </div>
-                        </div>
-                        <a
-                          class="carousel-control-prev"
-                          href="#carouselExampleControls3"
-                          role="button"
-                          data-slide="prev"
-                        >
-                          <span
-                            class="carousel-control-prev-icon"
-                            aria-hidden="true"
-                          ></span>
-                          <span class="sr-only">Previous</span>
-                        </a>
-                        <a
-                          class="carousel-control-next"
-                          href="#carouselExampleControls3"
-                          role="button"
-                          data-slide="next"
-                        >
-                          <span
-                            class="carousel-control-next-icon"
-                            aria-hidden="true"
-                          ></span>
-                          <span class="sr-only">Next</span>
-                        </a>
-                      </div>
+                      <img
+                        class="d-block w-100"
+                        src="assets/images/floor plans/primrose.webp"
+                        alt="First slide"
+                        onclick="openModalSlide('assets/images/floor plans/primrose.webp')"
+                      />
                     </div>
                   </div>
                 </div>

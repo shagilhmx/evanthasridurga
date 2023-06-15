@@ -1014,7 +1014,7 @@ summary {
   .container-lg,
   .container-md,
   .container-sm {
-    max-width: 960px
+    max-width: 100%
   }
 }
 
@@ -4644,7 +4644,7 @@ li.bottom-logo {
 }
 
 .content-layout2 .heading-and-content h4 {
-  color: #e95524;
+  color: #69963f;
   font-size: 24px;
   font-weight: 600;
   letter-spacing: .3px;
@@ -4690,7 +4690,7 @@ li.bottom-logo {
 }
 
 .color-heading h2 {
-  color: #e95524;
+  color: #114524;
   font-size: 32px;
   font-weight: 600;
   letter-spacing: .4px;
@@ -4748,11 +4748,7 @@ li.bottom-logo {
 }
 
 .download-brochure {
-  background: #525252
-}
-
-.download-brochure {
-  background: #525252;
+  background: #69963f;
   position: relative;
   margin-top: 120px;
   padding: 30px 0
@@ -4904,7 +4900,7 @@ li.bottom-logo {
 }
 
 .amenities-content h5 {
-  color: #e95524;
+  color: #69963f;
   font-size: 20px;
   font-weight: 600;
   letter-spacing: .25px;
@@ -5187,7 +5183,7 @@ li.bottom-logo {
 
 .project-banner {
   position: relative;
-  min-height: 626px
+  min-height: 550px
 }
 
 .project-banner-image {
@@ -5211,7 +5207,7 @@ li.bottom-logo {
 
 .project-banner {
   position: relative;
-  padding: 40px 0 30px
+  padding: 20px 0 30px
 }
 
 .pro-banner-content {
@@ -5277,9 +5273,22 @@ li.bottom-logo {
 }
 
 .bottom-code {
+  display: block;
   position: absolute;
   bottom: 30px;
   z-index: 1
+}
+
+.bottom-code-one p {
+  color: #fff;
+  font-size: 13px !important;
+}
+
+.bottom-code-one {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1;
 }
 
 .get-form {
@@ -5467,7 +5476,7 @@ li.bottom-logo {
 }
 
 .content-layout1 .colored-text {
-  color: #e95524;
+  color: #69963f;
   font-size: 24px;
   font-weight: 600;
   padding: 25px 32px 35px;
@@ -6042,7 +6051,7 @@ li.bottom-logo {
 
 @media screen and (min-width:992px) {
   .main-logo-wrap .site-logo {
-    width: 248px
+    width: 360px
   }
 
   .bottom-code,
@@ -6626,7 +6635,7 @@ li.bottom-logo {
   }
 
   .site-logo img {
-    width: 280px
+    width: 360px
   }
 
   .banner-btn-wrap {
@@ -6693,7 +6702,7 @@ li.bottom-logo {
   }
 
   .project-banner {
-    min-height: 1106px
+    min-height: 800px
   }
 
   .project-banner-content p {
@@ -6776,7 +6785,7 @@ li.bottom-logo {
   }
 
   .project-banner {
-    padding: 80px 15px 30px
+    padding: 0px 15px 80px
   }
 
   .project-banner-content h1 {
@@ -6791,9 +6800,10 @@ li.bottom-logo {
   }
 
   .project-banner-content p {
-    max-width: 224px;
+    max-width: 250px;
     line-height: 1.5;
-    letter-spacing: .2px
+    letter-spacing: .2px;
+    font-size: 18px;
   }
 
   .get-form .form-group {
@@ -6881,7 +6891,7 @@ li.bottom-logo {
   }
 
   .content-layout1 .colored-text {
-    color: #e95524;
+    color: #69963f;
     font-size: 24px;
     font-weight: 600;
     padding: 45px 45px 45px 0;
@@ -6922,7 +6932,16 @@ li.bottom-logo {
     margin-bottom: 15px
   }
 
+  .bottom-code-one {
+    display: block;
+    bottom: 60px;
+    top: 20px;
+    right: 20px;
+    z-index: 1;
+  }
+
   .bottom-code {
+    display: none;
     bottom: 60px
   }
 

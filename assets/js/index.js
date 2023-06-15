@@ -325,7 +325,7 @@ function openApi(e, t) {
         }),
       };
     axios
-      .post("http://api-dcrm-dev.fincity.in/open/opportunity", d)
+      .post("https://api-dcrm.fincity.com/open/opportunity", d)
       .then((e) => {
         gtag_report_conversion(),
           a
@@ -341,7 +341,7 @@ function openApi(e, t) {
                   `<strong> +${intl.getSelectedCountryData()?.dialCode}-${
                     document.getElementById("phoneNumber")?.value
                   }</strong>`),
-                  (responseData = e))
+                (responseData = e))
               : 2 == t
               ? (document
                   .querySelector(".enquiry .section5Header")
@@ -355,23 +355,23 @@ function openApi(e, t) {
                     document.getElementById("phone")?.value
                   }</strong>`),
                 (responseData = e))
-                : 3 == t
-                && (document
-                    .querySelector(".enquiry1 .sectionHeader")
-                    .setAttribute("style", "display: none"),
-                  (document.getElementById("enquiryMain1").style.display =
-                    "none"),
-                  (document.getElementById("otpVerification2").style.display =
-                    "flex"),
-                  (document.querySelector("#numberText2").innerHTML =
-                    document.querySelector("#numberText2").innerText +
-                    `<strong> +${intl1.getSelectedCountryData()?.dialCode}-${
-                      document.getElementById("phone1")?.value
-                    }</strong>`),
-                  (responseData = e))
-              : setTimeout(() => {
-                  window.location.href = "thankyou.html";
-                }, 1e3);
+              : 3 == t &&
+                (document
+                  .querySelector(".enquiry1 .sectionHeader")
+                  .setAttribute("style", "display: none"),
+                (document.getElementById("enquiryMain1").style.display =
+                  "none"),
+                (document.getElementById("otpVerification2").style.display =
+                  "flex"),
+                (document.querySelector("#numberText2").innerHTML =
+                  document.querySelector("#numberText2").innerText +
+                  `<strong> +${intl1.getSelectedCountryData()?.dialCode}-${
+                    document.getElementById("phone1")?.value
+                  }</strong>`),
+                (responseData = e))
+            : setTimeout(() => {
+                window.location.href = "thankyou.html";
+              }, 1e3);
       })
       .catch((e) => {
         (document.getElementById(
@@ -418,7 +418,7 @@ function detectLocation(e, t) {
               location: { lat: e?.coords?.latitude, lng: e?.coords?.longitude },
             };
             axios
-              .post("http://api-dcrm-dev.fincity.in/open/opportunity/verify", n)
+              .post("https://api-dcrm.fincity.com/open/opportunity/verify", n)
               .then((e) => {
                 (document.getElementById(
                   1 == t
@@ -488,7 +488,7 @@ function resendOtp(e, t) {
   e.stopPropagation(),
     axios
       .post(
-        `http://api-dcrm-dev.fincity.in/open/opportunity/send-otp?token=${responseData?.data?.token}`,
+        `https://api-dcrm.fincity.com/open/opportunity/send-otp?token=${responseData?.data?.token}`,
       )
       .then((e) => {
         (document.querySelector(t ? "#resendOtp" : "#resendOtp1").innerText =
@@ -510,18 +510,17 @@ function verfiyOtp(e, t) {
         ?.value,
     l = { token: responseData?.data?.token, otp: n };
   axios
-    .post("http://api-dcrm-dev.fincity.in/open/opportunity/verify", l)
+    .post("https://api-dcrm.fincity.com/open/opportunity/verify", l)
     .then((e) => {
-      (!0 === downloadPdf &&
-        (document.getElementById("pdfDownload").click(),
-        (downloadPdf = !1))),
-      (document.getElementById(
-        1 == t
-          ? "otpVerification"
-          : 2 == t
-          ? "otpVerification1"
-          : "otpVerification2",
-      ).style.display = "none"),
+      !0 === downloadPdf &&
+        (document.getElementById("pdfDownload").click(), (downloadPdf = !1)),
+        (document.getElementById(
+          1 == t
+            ? "otpVerification"
+            : 2 == t
+            ? "otpVerification1"
+            : "otpVerification2",
+        ).style.display = "none"),
         (document.getElementById(
           1 == t ? "location" : 2 == t ? "location1" : "location2",
         ).style.display = "flex");
@@ -530,9 +529,33 @@ function verfiyOtp(e, t) {
           if (0 == --n) {
             let t = getDeviceType();
             clearInterval(l),
-              (window.location.href = `https://dcrm-dev.fincity.in/?&user=consumer&device-type=${t}&token=${e?.data?.consumerToken}&isLandingPage=true`);
+              (window.location.href = `https://dcrm.fincity.com/?&user=consumer&device-type=${t}&token=${e?.data?.consumerToken}&isLandingPage=true`);
           }
         }, 1e3);
     })
     .catch((e) => {});
+}
+
+function openModalSlide(imageSource) {
+  var modal = document.getElementById("imageModal");
+  var modalImage = document.getElementById("modalImage");
+  modalImage.src = imageSource;
+  modal.classList.add("show");
+  modal.style.display = "block";
+  document.body.classList.add("modal-open");
+  let e = document.getElementById("page"),
+    t = document.getElementById("callButton");
+  e.classList.add("modalBlurOne"),
+    t.classList.add("modalBlurOne"),
+    (downloadPdf = !0);
+}
+
+function closeModalSlide() {
+  var modal = document.getElementById("imageModal");
+  modal.classList.remove("show");
+  modal.style.display = "none";
+  document.body.classList.remove("modal-open");
+  let e = document.getElementById("page"),
+    t = document.getElementById("callButton");
+  e.classList.remove("modalBlurOne"), t.classList.remove("modalBlurOne");
 }
