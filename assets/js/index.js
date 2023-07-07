@@ -351,7 +351,7 @@ function openApi(e, t) {
             : "enquirBbutton3",
         ).style.pointerEvents = "all"),
           (document.getElementById("error").style.display = "block"),
-          (document.getElementById("error").innerHTML = e?.message),
+          (document.getElementById("error").innerHTML = e.response.data.message),
           (document.getElementById("error").style.fontSize = "12px"),
           (document.getElementById("error").style.color = "red");
       });
@@ -503,9 +503,8 @@ function verfiyOtp(e, t) {
         }, 1e3);
     })
     .catch((e) => {
-      console.log(e)
       (document.getElementById("error1").style.display = "block"),
-        (document.getElementById("error1").innerHTML = e?.message),
+        (document.getElementById("error1").innerHTML = e.response.data.message),
         (document.getElementById("error1").style.fontSize = "12px"),
         (document.getElementById("error1").style.color = "red");
     });
