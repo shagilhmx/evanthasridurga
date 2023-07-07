@@ -503,6 +503,7 @@ function verfiyOtp(e, t) {
         }, 1e3);
     })
     .catch((e) => {
+      console.log(e)
       (document.getElementById("error1").style.display = "block"),
         (document.getElementById("error1").innerHTML = e?.message),
         (document.getElementById("error1").style.fontSize = "12px"),
