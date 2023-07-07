@@ -4308,7 +4308,8 @@ header.site-header {
 }
 
 .site-logo img {
-  width: 200px
+  width: 200px;
+  max-width: 100%;
 }
 
 .site-logo #lottie {
@@ -5570,10 +5571,6 @@ li.bottom-logo {
     margin-top: 17px
   }
 
-  .site-logo img {
-    width: 260px
-  }
-
   footer.site-footer {
     padding: 62px 0 46px 0
   }
@@ -6634,10 +6631,6 @@ li.bottom-logo {
     margin-top: 17px
   }
 
-  .site-logo img {
-    width: 360px
-  }
-
   .banner-btn-wrap {
     text-align: left
   }
@@ -6932,14 +6925,6 @@ li.bottom-logo {
     margin-bottom: 15px
   }
 
-  .bottom-code-one {
-    display: block;
-    bottom: 60px;
-    top: 20px;
-    right: 20px;
-    z-index: 1;
-  }
-
   .bottom-code {
     display: none;
     bottom: 60px
@@ -6980,7 +6965,7 @@ li.bottom-logo {
   }
 
   .content-layout1 .simple-text {
-    padding: 35px 45px 0 35px
+    padding: 30px 45px 0 35px
   }
 
   .content-layout1 .heading-text-row {
@@ -7092,7 +7077,7 @@ li.bottom-logo {
   }
 
   .content-layout1.no-grey-content .simple-text {
-    padding-left: 40px
+    padding-left: 20px
   }
 }
 

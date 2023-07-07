@@ -51,9 +51,10 @@
 
     <!-- Google tag (gtag.js) -->
     <!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) -->
     <script
       async
-      src="https://www.googletagmanager.com/gtag/js?id=AW-10852030635"
+      src="https://www.googletagmanager.com/gtag/js?id=AW-11233796004"
     ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -62,10 +63,11 @@
       }
       gtag("js", new Date());
 
-      gtag("config", "AW-10852030635");
+      gtag("config", "AW-11233796004");
     </script>
+
     <!-- Event snippet for Earthen Ambience - Submit Lead Form conversion page
-    In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
     <script>
       function gtag_report_conversion(url) {
         var callback = function () {
@@ -74,14 +76,12 @@
           }
         };
         gtag("event", "conversion", {
-          send_to: "AW-10852030635/udX_CPei6KsYEKux07Yo",
+          send_to: "AW-11233796004/ijFKCJ7P4rQYEKS_2Owp",
           event_callback: callback,
         });
         return false;
       }
     </script>
-
-    <!-- Google tag (gtag.js) ends -->
 
     <script src="assets/js/index.js" defer id="index-js"></script>
     <script defer src="https://unpkg.com/axios/dist/axios.min.js"></script>
@@ -98,6 +98,42 @@
       rel="stylesheet"
       href="https://cdn.tutorialjinni.com/intl-tel-input/17.0.19/css/intlTelInput.css"
     />
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js",
+      );
+      fbq("init", "354887529878915");
+      fbq("track", "PageView");
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=354887529878915&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
 
     <!--  -->
     <!--  -->
@@ -296,7 +332,7 @@
           >
             Verify
           </button>
-          <div id="error"></div>
+          <div id="error1"></div>
         </form>
         <div class="location" id="location" onsubmit="return false">
           <div class="locationSection">
@@ -347,49 +383,55 @@
       </div>
     </div>
     <!-- call button -->
-    <div class="buttonDiv" id="callButton">
-      <a href="tel:+919513683855">
-        <span class="callIcon">
-          <img
-            src="assets/images/navbarIcons/callIcon.svg"
-            alt="callIcon"
-            href="tel:+919513683855"
-            loading="lazy"
-            height="auto"
-            width="auto"
-          />
-        </span>
-        <span class="phoneNo">+91 9513683855</span>
-      </a>
-    </div>
     <!-- call button ends here -->
     <div id="page" class="site">
+      <div class="navbar" id="navbar">
+        <div class="navbarDiv">
+          <div class="propertyDeveloper">
+            <div class="row">
+              <div class="banner-logo">
+                <div class="site-logo">
+                  <img
+                    width="480"
+                    height="300"
+                    alt="earthen-ambience"
+                    decoding="async"
+                    loading="lazy"
+                    src="assets/images/logo/project_Developer.webp"
+                    class="custom-logo br-lazy"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="buttonFincityDiv">
+            <div class="buttonDiv">
+              <div class="navbarButton call">
+                <a href="tel:+91 9513683855"
+                  ><img
+                    src="assets/images/navbarIcons/callIcon.svg"
+                    alt="callIcon"
+                    href="tel:+91 9513683855"
+                    loading="lazy"
+                    height="auto"
+                    width="auto"
+                  />
+                  <span class="phoneNo">9513683855</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <main id="primary" class="site-main">
         <section class="project-banner">
           <div class="container">
             <div class="pro-banner-content">
-              <div class="row">
-                <div class="col-lg-10 col-md-10 col-7">
-                  <div class="banner-logo">
-                    <div class="site-logo">
-                      <img
-                        width="480"
-                        height="300"
-                        alt="Livingwalls"
-                        decoding="async"
-                        loading="lazy"
-                        src="assets/images/logo/project_Developer.webp"
-                        class="custom-logo br-lazy"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
               <div class="row" id="banner">
                 <div class="col-lg-10 col-md-10 col-12">
                   <div class="project-banner-content white-banner">
                     <div class="project-description">
-                      <p>Ultra luxury 3 BHK & 4 BHK row villas</p>
+                      <p>Ultra luxury 3 BHK & 4 BHK Villas</p>
                     </div>
                     <h5>Starting at &#8377;1.88 Crore</h5>
                     <div class="book_now" onclick="openModal()">Book Now</div>
@@ -640,10 +682,11 @@
               <div class="row gx-0">
                 <div class="col-lg-5 col-md-8">
                   <div class="simple-text">
-                    With the perfect fusion of Sri Durga Developers’ avant-garde
-                    vision and Evantha Developer’s exquisite lifestyle
-                    designing, this venture aims to fabricate the future of real
-                    estate.
+                    Evantha Sri Durga excels in creating sophisticated
+                    residential spaces that blend the best of modern and
+                    contemporary elements. Their designs reflect an elegant
+                    fusion of styles, providing residents with a luxurious and
+                    convenient living experience.
                   </div>
                 </div>
                 <div class="col-lg-3 col-md-4">
@@ -651,7 +694,8 @@
                     <div class="inner-content">
                       <h5>52 Villas</h5>
                       <div class="content-text">
-                        Boutique home community spread over approx. 2.5 Acres
+                        Boutique home community spread over approx. 1,06,000
+                        sq.ft.
                       </div>
                     </div>
                   </div>
@@ -673,9 +717,9 @@
                 </div>
                 <div class="col-lg-4 col-md-4">
                   <div class="text">
-                    The added considerations are your daily commutes, If your
-                    business, work space or store is optimally accessible from
-                    Sarjapur, then half your decision is taken
+                    Unlock a new level of convenience. Say goodbye to commuting
+                    woes and embrace the joy of being perfectly connected while
+                    escaping the clutches of city chaos.
                   </div>
                 </div>
               </div>
@@ -695,8 +739,11 @@
                     border: 7px solid #cbcbcb;
                     border-radius: 40px;
                   "
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
                   frameborder="0"
-                  src="https://www.google.com/maps/embed/v1/place?q=Evantha+Earthen+Ambience,+Thyvakanahally,+Bengaluru,+Karnataka,+India&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
+                  src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3890.1146536819283!2d77.77848!3d12.835866999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTLCsDUwJzA5LjEiTiA3N8KwNDYnNDIuNSJF!5e0!3m2!1sen!2sin!4v1688451887678!5m2!1sen!2sin"
                 ></iframe>
               </div>
             </div>
@@ -721,7 +768,7 @@
                       </div>
                       <div class="col-lg-4">
                         <div class="heading-and-content">
-                          <h4>1km from proposed STRR road</h4>
+                          <h4>1km from proposed 300ft STRR road</h4>
                         </div>
                       </div>
                     </div>
@@ -780,15 +827,25 @@
               <div class="row gx-0 gx-md-1 gx-lg-0">
                 <div class="col-lg-8 col-md-7">
                   <div class="row">
-                    <div class="col-lg-7 col-md-12">
+                    <div class="col-lg-4 col-md-12">
                       <div class="simple-text">
-                        In development, we used environmentally friendly facade
-                        materials, terracotta tiles for terrace & solar
-                        provision. 8ft Doors & Windows makes it Naturally Well
-                        Lit and ventilated homes.
+                        Our design features a skylight that bathes the space in
+                        sunshine while cleverly keeping rain at bay & 8ft doors
+                        ensures ample ventilation & airy premises.
                       </div>
                     </div>
-                    <div class="col-lg-5 col-md-12">
+                    <div class="col-lg-4 col-md-12">
+                      <div class="heading-text-row">
+                        <div class="inner-content">
+                          <div class="content-text">
+                            In development, we have used environmentally
+                            friendly facade materials, terracotta tiles for
+                            terrace & solar provision.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12">
                       <div class="heading-text-row">
                         <div class="inner-content">
                           <div class="content-text">
@@ -829,7 +886,7 @@
                 </div>
                 <div class="col-xl-4 col-lg-4 col-md-5 col-12">
                   <div class="layout-content">
-                    <h5>Club House</h5>
+                    <h5>Clubhouse & Amenities</h5>
                     <p>
                       A clubhouse with a co-working space, a library and a gym
                       are all part of the indoor amenities, while the infinity
@@ -850,10 +907,10 @@
                   <div class="layout-content">
                     <h5>Backyard</h5>
                     <p>
-                      This was one of the key considerations for every home, to
-                      have its own large private garden. The garden could just
-                      be an extension of the dining, or could be an active party
-                      space or could just be a zone for quiet reading.
+                      This was one of the key considerations for a home, to have
+                      its own large private garden. The garden could just be an
+                      extension of the dining, or could be an active party space
+                      or could just be a zone for quiet reading.
                     </p>
                   </div>
                 </div>
@@ -909,8 +966,12 @@
                   <div class="layout-content">
                     <h5>Terrace Bar</h5>
                     <p>
-                      Place for the best privacy which could also be a place
-                      where the entire family could connect in an activity
+                      The terrace is a versatile space designed for various
+                      purposes, offering provisional upgrades to enhance your
+                      experience. It serves as a Terrace Bar, vegetable garden,
+                      outdoor working spot, barbeque area, private flower
+                      garden, and more, providing endless possibilities for
+                      relaxation, entertainment, and enjoying the outdoors.
                     </p>
                   </div>
                 </div>
@@ -998,20 +1059,7 @@
               <div
                 class="col-lg-4 col-md-12 order-1 order-lg-1 order-md-1 order-sm-1 d-block"
               >
-                <div class="brochure-image">
-                  <img
-                    width="600"
-                    height="479"
-                    alt="image"
-                    decoding="async"
-                    loading="lazy"
-                    data-breeze="https://livingwalls.in/wp-content/uploads/2022/06/Brochure_Mockup.png"
-                    src="data:image/svg+xml;utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20600%20479'%3E%3C/svg%3E"
-                    class="attachment-medium_large size-medium_large br-lazy"
-                    data-brsrcset="https://livingwalls.in/wp-content/uploads/2022/06/Brochure_Mockup.png 600w, https://livingwalls.in/wp-content/uploads/2022/06/Brochure_Mockup-300x240.png 300w"
-                    data-brsizes="(max-width: 600px) 100vw, 600px"
-                  />
-                </div>
+                <div class="brochure-image"></div>
               </div>
             </div>
           </div>

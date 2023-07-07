@@ -203,55 +203,24 @@ window.addEventListener(
         checkInputs1([...l].splice(8), document.getElementById("otpBbutton2"));
     },
     !1,
-  ),
-  window.addEventListener("load", (e) => {
-    setTimeout(() => {
-      document.getElementById("callButton").style.display = "flex";
-    }, 100);
-  });
-let target = document.querySelector(".enquiry1"),
-  topTarget = document.querySelector(".project-banner");
-const callIcon = document.querySelector(".buttonDiv .callIcon"),
-  btnDiv = document.querySelector(".buttonDiv"),
-  body = document.querySelector("body"),
-  hide = () => {
-    window.innerWidth <= 768 ||
-      btnDiv.setAttribute(
-        "style",
-        `border-radius: 100%;padding: 0; transform: translateX(calc(100% - ${
-          callIcon.getBoundingClientRect().width + 20
-        }px)); background-color: transparent;`,
-      );
-  },
-  show = () => {
-    window.innerWidth <= 768 || btnDiv.setAttribute("style", "");
-  },
-  myobserver = new IntersectionObserver(
-    (e) => {
-      e.forEach((e) => {
-        e.isIntersecting &&
-          (e.target === target &&
-            (hide(),
-            btnDiv.addEventListener("mouseenter", show),
-            btnDiv.addEventListener("mouseleave", hide)),
-          e.target === topTarget &&
-            (show(),
-            btnDiv.removeEventListener("mouseenter", show),
-            btnDiv.removeEventListener("mouseleave", hide)));
-      });
-    },
-    { threshold: 0.2 },
   );
-myobserver.observe(topTarget),
-  myobserver.observe(target),
-  window.addEventListener("load", (e) => {
-    setTimeout(() => {
-      document.getElementById("modal").style.display = "block";
-      let e = document.getElementById("page"),
-        t = document.getElementById("callButton");
-      e.classList.add("modalBlur"), t.classList.add("modalBlur");
-    }, 3e3);
-  });
+let target = document.querySelector(".enquiry1"),
+  topTarget = document.querySelector(".pro-banner-content");
+const btnDiv = document.querySelector(".navbar");
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 150) {
+    btnDiv?.classList?.add("show");
+  } else btnDiv?.classList?.remove("show");
+});
+
+window.addEventListener("load", (e) => {
+  setTimeout(() => {
+    document.getElementById("modal").style.display = "block";
+    let e = document.getElementById("page"),
+      t = document.getElementById("callButton");
+    e.classList.add("modalBlur"), t.classList.add("modalBlur");
+  }, 3e3);
+});
 let downloadPdf = !1;
 function openModal() {
   document.getElementById("modal").style.display = "block";
@@ -325,7 +294,7 @@ function openApi(e, t) {
         }),
       };
     axios
-      .post("http://api-dcrm-dev.fincity.in/open/opportunity", d)
+      .post("https://api-dcrm.fincity.com/open/opportunity", d)
       .then((e) => {
         gtag_report_conversion(),
           a
@@ -418,7 +387,7 @@ function detectLocation(e, t) {
               location: { lat: e?.coords?.latitude, lng: e?.coords?.longitude },
             };
             axios
-              .post("http://api-dcrm-dev.fincity.in/open/opportunity/verify", n)
+              .post("https://api-dcrm.fincity.com/open/opportunity/verify", n)
               .then((e) => {
                 (document.getElementById(
                   1 == t
@@ -488,7 +457,7 @@ function resendOtp(e, t) {
   e.stopPropagation(),
     axios
       .post(
-        `http://api-dcrm-dev.fincity.in/open/opportunity/send-otp?token=${responseData?.data?.token}`,
+        `https://api-dcrm.fincity.com/open/opportunity/send-otp?token=${responseData?.data?.token}`,
       )
       .then((e) => {
         (document.querySelector(t ? "#resendOtp" : "#resendOtp1").innerText =
@@ -510,7 +479,7 @@ function verfiyOtp(e, t) {
         ?.value,
     l = { token: responseData?.data?.token, otp: n };
   axios
-    .post("http://api-dcrm-dev.fincity.in/open/opportunity/verify", l)
+    .post("https://api-dcrm.fincity.com/open/opportunity/verify", l)
     .then((e) => {
       !0 === downloadPdf &&
         (document.getElementById("pdfDownload").click(), (downloadPdf = !1)),
@@ -529,11 +498,16 @@ function verfiyOtp(e, t) {
           if (0 == --n) {
             let t = getDeviceType();
             clearInterval(l),
-              (window.location.href = `https://dcrm-dev.fincity.in/?&user=consumer&device-type=${t}&token=${e?.data?.consumerToken}&isLandingPage=true`);
+              (window.location.href = `https://dcrm.fincity.com/?&user=consumer&device-type=${t}&token=${e?.data?.consumerToken}&isLandingPage=true`);
           }
         }, 1e3);
     })
-    .catch((e) => {});
+    .catch((e) => {
+      (document.getElementById("error1").style.display = "block"),
+        (document.getElementById("error1").innerHTML = e?.message),
+        (document.getElementById("error1").style.fontSize = "12px"),
+        (document.getElementById("error1").style.color = "red");
+    });
 }
 
 function openModalSlide(imageSource) {
